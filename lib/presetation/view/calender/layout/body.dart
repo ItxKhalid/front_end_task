@@ -4,6 +4,7 @@ import 'package:front_end_task/elements/widgets/text/text_widget.dart';
 
 import '../../../../elements/constants/constants.dart';
 import '../../../../elements/widgets/buttons/icon_button.dart';
+import '../../../../elements/widgets/stack_card.dart';
 import 'components/upcoming.dart';
 
 class CalendarBody extends StatefulWidget {
@@ -112,12 +113,7 @@ class _CalendarBodyState extends State<CalendarBody> {
   }
 
   Widget _buildCalendar() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      decoration: BoxDecoration(
-        color: AppColors.kWhite,
-        borderRadius: BorderRadius.circular(16),
-      ),
+    return CustomStackCard(
       child: TableCalendar(
         firstDay: DateTime.utc(2023, 1, 1),
         lastDay: DateTime.utc(2024, 12, 31),
@@ -142,24 +138,23 @@ class _CalendarBodyState extends State<CalendarBody> {
           defaultDecoration: BoxDecoration(
             color: AppColors.kGray2.withOpacity(0.4),
             borderRadius: BorderRadius.circular(
-                12), // Keep this if you want rounded corners
+                12),
           ),
           disabledDecoration: BoxDecoration(
             color: AppColors.kGray2.withOpacity(0.4),
             borderRadius: BorderRadius.circular(
-                12), // Keep this if you want rounded corners
+                12),
           ),
           todayDecoration: BoxDecoration(
             color: Colors.blue,
             borderRadius: BorderRadius.circular(
-                12), // Keep this if you want rounded corners
+                12),
           ),
           selectedDecoration: BoxDecoration(
             color: Colors.blueAccent,
             shape: BoxShape.rectangle,
-            // Use BoxShape.rectangle here for rounded corners
             borderRadius: BorderRadius.circular(
-                12), // Or remove this line if using BoxShape.circle
+                12),
           ),
         ),
       ),

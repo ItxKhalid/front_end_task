@@ -5,11 +5,11 @@ import 'package:front_end_task/elements/constants/app_colors.dart';
 
 
 class AppTypography {
-  static TextStyle kAppStyle({double? fontSize,FontWeight? fontWeight}) {
+  static TextStyle kAppStyle({Color? color,double? fontSize,FontWeight? fontWeight}) {
     return GoogleFonts.nunito(
       fontSize: fontSize,
       fontWeight: fontWeight ?? FontWeight.w700,
-      color: AppColors.kBlack,
+      color: color ?? AppColors.kBlack,
     );
   }
 }

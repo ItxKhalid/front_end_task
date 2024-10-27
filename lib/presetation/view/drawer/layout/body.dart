@@ -4,6 +4,7 @@ import 'package:front_end_task/utils/utils.dart';
 import '../../calender/calender_view.dart';
 import '../../calender/layout/body.dart';
 import '../../chatList/chat_list_view.dart';
+import '../../dashBoard/bash_board_view.dart';
 import 'components/reusable_row.dart';
 
 class DrawerBody extends StatefulWidget {
@@ -108,17 +109,17 @@ class _DrawerBodyState extends State<DrawerBody> {
                     ),
                     body: IndexedStack(
                       index: selectedScreenIndex,
-                      children:   [
-                        const CalenderView(),
-                        const CalenderView(),
-                        const CalenderView(),
-                        const CalenderView(),
-                        MessagesScreen(),
-                        const CalenderView(),
-                        const CalenderView(),
-                        const CalenderView(),
-                        const CalenderView(),
-                        const CalenderView(),
+                      children:   const [
+                        AnalyticsDashboard(),
+                        CalenderView(),
+                        CalenderView(),
+                        CalenderView(),
+                        ChatListView(),
+                        CalenderView(),
+                        CalenderView(),
+                        CalenderView(),
+                        CalenderView(),
+                        CalenderView(),
                       ],
                     ),
                   ),
@@ -127,7 +128,7 @@ class _DrawerBodyState extends State<DrawerBody> {
             );
           },
         ),
-        _rightClick(),
+        // _rightClick(),
       ],
     );
   }

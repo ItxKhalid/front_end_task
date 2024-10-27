@@ -29,38 +29,38 @@ class AttendeeRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: List.generate(
-        imagePaths.length,
-        (index) {
-          String imagePath = imagePaths[index % imagePaths.length];
-          bool isSvg = imagePath.endsWith('.svg');
+      imagePaths.length,
+          (index) {
+        String imagePath = imagePaths[index % imagePaths.length];
+        bool isSvg = imagePath.endsWith('.svg');
 
-          return Transform.translate(
-            offset: Offset(-(index * 8.0), 0),
-            child: CircleAvatar(
-              radius: 16,
-              backgroundColor: Colors.transparent,
-              child: Container(
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: _getRandomGradient(),
+        return Transform.translate(
+          offset: Offset(-(index * 8.0), 0),
+          child: CircleAvatar(
+            radius: 16,
+            backgroundColor: Colors.transparent,
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: _getRandomGradient(),
+              ),
+              child: isSvg
+                  ? SvgPicture.asset(
+                imagePath,
+                fit: BoxFit.cover,
+              )
+                  : ClipOval(
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.cover,
                 ),
-                child: isSvg
-                    ? SvgPicture.asset(
-                        imagePath,
-                        fit: BoxFit.cover,
-                      )
-                    : ClipOval(
-                        child: Image.asset(
-                          imagePath,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
               ),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
+    ),
     );
   }
 }

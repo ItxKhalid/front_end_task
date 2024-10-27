@@ -23,5 +23,14 @@ class AppAssets {
   static String kSettingSvg = 'assets/icons/Setting.svg';
   static String kGridView = 'assets/icons/grid_view.svg';
   static String kTime = 'assets/icons/Time.svg';
+  static String kProgress = 'assets/icons/Progress.svg';
+  static String kDownload = 'assets/icons/Download.svg';
+  static String kInsta = 'assets/images/insta.png';
+  static String kMore = 'assets/icons/More.svg';
+  static String kSmile = 'assets/icons/Smile.svg';
+  static String kSend = 'assets/icons/Send.svg';
+  static String kPDF = 'assets/icons/PDF.svg';
+  static String kImage = 'assets/icons/Image 2.svg';
+  static String kAttachment = 'assets/icons/Attachment.svg';
 
 }

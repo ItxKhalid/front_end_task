@@ -1,21 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../constants/constants.dart';
 
 class SearchField extends StatelessWidget {
   final TextEditingController controller;
-  final VoidCallback filterCallback;
   final bool isEnabled;
-  final bool isFilterIcon;
   final String? hintText;
   final void Function(String)? onChanged;
+
   const SearchField({
     required this.controller,
-    required this.filterCallback,
     this.isEnabled = true,
-    this.isFilterIcon = true,
     this.onChanged,
     this.hintText,
     super.key,
@@ -30,53 +23,18 @@ class SearchField extends StatelessWidget {
       enabled: isEnabled,
       decoration: InputDecoration(
         hintText: hintText ?? 'Search...',
+        hintStyle: AppTypography.kAppStyle(fontWeight: FontWeight.w400)
+            .copyWith(color: AppColors.kGrayText),
         border: InputBorder.none,
         prefixIcon: Padding(
           padding: EdgeInsets.all(14.h),
           child: SvgPicture.asset(
-            AppAssets.kLogoPng,
+            AppAssets.kSearchSvg,
           ),
         ),
-        suffixIcon: isFilterIcon
-            ? Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Container(
-                    height: 20.0.h,
-                    width: 1.w,
-                    color: AppColors.kBlack,
-                  ),
-                  IconButton(
-                    onPressed: filterCallback,
-                    icon: SvgPicture.asset(
-                      AppAssets.kSearchSvg,
-                    ),
-                  ),
-                ],
-              )
-            : null,
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: AppColors.kBlack,
-          ),
-          borderRadius: BorderRadius.circular(
-            AppSpacing.radiusThirty,
-          ),
-        ),
-        disabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: AppColors.kBlack,
-          ),
-          borderRadius: BorderRadius.circular(
-            AppSpacing.radiusThirty,
-          ),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: AppColors.kBlack,
-          ),
-          borderRadius: BorderRadius.circular(AppSpacing.radiusThirty),
-        ),
+        focusedBorder: InputBorder.none,
+        disabledBorder: InputBorder.none,
+        enabledBorder: InputBorder.none,
       ),
     );
   }

@@ -1,5 +1,6 @@
 import '../../../../../elements/constants/constants.dart';
 import '../../../../../elements/widgets/dotted_line.dart';
+import '../../../../../elements/widgets/stack_card.dart';
 import 'attendee_row.dart';
 
 class EventCard extends StatelessWidget {
@@ -54,18 +55,9 @@ class EventCard extends StatelessWidget {
                 spacing: 8,
                 color: AppColors.kGray100.withOpacity(0.5),
               ),
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey[400]!,
-                      blurRadius: 4,
-                    ),
-                  ],
-                ),
+              CustomStackCard(
+                borderRadius: 14,
+                offset: 28,
                 child: Row(
                   children: [
                     Container(
@@ -123,6 +115,7 @@ class EventCard extends StatelessWidget {
                   ],
                 ),
               ),
+              5.verticalSpace,
               DottedLine(
                 dotWidth: 6,
                 spacing: 8,

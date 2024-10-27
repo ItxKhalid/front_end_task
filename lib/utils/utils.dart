@@ -47,5 +47,71 @@ class Utils{
     ),
   ];
 
-
+  static final List<Map<String, dynamic>> chatList = [
+    {
+      'name': 'Alphaboard',
+      'message': 'Hello, Mark! I am wr...',
+      'isPinned': true,
+      'unreadCount': 3,
+      'isOnline': false,
+      'useTextAvatar': true,
+      'avatarText': 'A',
+      'avatar': null,
+    },
+    {
+      'name': 'Design Team',
+      'message': 'Hello. Can you drop t...',
+      'isPinned': true,
+      'unreadCount': null,
+      'isOnline': false,
+      'useTextAvatar': true,
+      'avatarText': 'DT',
+      'avatar': null,
+    },
+    {
+      'name': 'Dustin Williamson',
+      'message': 'Dustin is typing...',
+      'isPinned': true,
+      'unreadCount': 5,
+      'isOnline': true,
+      'useTextAvatar': false,
+      'avatar': 'assets/images/Avatar.svg',
+    },
+    {
+      'name': 'Jane Wilson',
+      'message': 'Hi! How are you, Steve? 😃',
+      'isPinned': false,
+      'unreadCount': null,
+      'isOnline': true,
+      'useTextAvatar': false,
+      'avatar': 'assets/images/Avatar1.svg',
+    },
+    {
+      'name': 'Brandon Pena',
+      'message': 'Hi! How are you, Brandon? 😃',
+      'isPinned': false,
+      'unreadCount': null,
+      'isOnline': false,
+      'useTextAvatar': false,
+      'avatar': AppAssets.kAvatarPro,
+    },
+    {
+      'name': 'Natan Fox',
+      'message': 'Hello we have meeting...',
+      'isPinned': false,
+      'unreadCount': null,
+      'isOnline': false,
+      'useTextAvatar': false,
+      'avatar': AppAssets.kAvatarPro,
+    },
+    {
+      'name': 'Jacob Hawkins',
+      'message': 'Well done!👍',
+      'isPinned': false,
+      'unreadCount': 1,
+      'isOnline': true,
+      'useTextAvatar': false,
+      'avatar': AppAssets.kAvatar3,
+    },
+  ];
 }
