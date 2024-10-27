@@ -1,5 +1,5 @@
 name: front_end_task
-description: "A new Flutter project."
+description: "A new Flutter project. sdk is 3.19.4"
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
